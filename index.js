@@ -29,7 +29,7 @@ function getCoordinates(city) {
             console.error('Error:', error);
             alert(error.message);
         });
-}
+};
 
 // Function to get weather data using coordinates
 function getWeather(lat, lon, city) {
@@ -48,4 +48,9 @@ function getWeather(lat, lon, city) {
             console.error('Error:', error);
             alert('Error fetching weather data.');
         });
+};
+
+// Function to update the UI with weather data
+function updateUI(weatherData, city) {
+    
 }
