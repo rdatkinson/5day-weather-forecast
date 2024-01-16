@@ -71,4 +71,16 @@ function updateUI(weatherData, city) {
         const humidity = dayData.main.humidity;
         const wind = dayData.wind.speed;
         const iconUrl = `http://openweathermap.org/img/w/${dayData.weather[0].icon}.png`;
+
+        // Create a div for each forecast day and append to the container
+        const forecastDiv = document.createElement('div');
+        forecastDiv.classList.add('forecast-day');
+        forecastDiv.innerHTML = `
+            <p><strong>${date}</strong></p>
+            <img src="${iconUrl}" alt="${dayData.weather[0].description}" class="weather-icon">
+            <p>Temp: <span class="forecast-temp">${temp} °C</span></p>
+            <p>Wind: <span class="forecast-wind">${wind} KPH</span></p>
+            <p>Humidity: <span class="forecast-humidity">${humidity} %</span></p>`;
+        forecastContainer.appendChild(forecastDiv);
+    }
 }
