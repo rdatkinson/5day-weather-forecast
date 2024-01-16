@@ -98,4 +98,12 @@ function updateHistory(city) {
     // Update the search history section in the UI
     const historyContainer = document.getElementById('search-history');
     historyContainer.innerHTML = ''; // Clear previous history
+        // Create and append div elements for each city in the history
+        history.forEach(savedCity => {
+            const historyDiv = document.createElement('div');
+            historyDiv.textContent = savedCity;
+            // Add click event listener to each history item
+            historyDiv.addEventListener('click', () => getCoordinates(savedCity));
+            historyContainer.appendChild(historyDiv);
+        });
 }
