@@ -87,5 +87,7 @@ function updateUI(weatherData, city) {
 
 // Function to update search history
 function updateHistory(city) {
+    // Retrieve existing history from localStorage or initialize an empty array
+    let history = JSON.parse(localStorage.getItem('weatherSearchHistory')) || [];
     
 }
