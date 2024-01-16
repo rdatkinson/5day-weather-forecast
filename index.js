@@ -52,5 +52,11 @@ function getWeather(lat, lon, city) {
 
 // Function to update the UI with weather data
 function updateUI(weatherData, city) {
-    
+    // Set current weather information
+    document.getElementById('city-name').textContent = city;
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+    document.getElementById('temperature').textContent = `${weatherData.list[0].main.temp} °C`;
+    document.getElementById('humidity').textContent = `${weatherData.list[0].main.humidity}%`;
+    document.getElementById('wind').textContent = `${weatherData.list[0].wind.speed} KPH`;
+
 }
