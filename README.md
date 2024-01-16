@@ -1,7 +1,7 @@
 # 5day-weather-forecast
 
 ## Description
-This project is an app designed for the end user to be able to see a 5 day weather forecast for any city they wish, which is built on OpenWeatherMap's 5 day forecast API.
+This project is an app designed for the end user to be able to see a 5 day weather forecast for any city they wish, which is built on OpenWeatherMap's 5 day forecast API. The deployed application https://github.com/rdatkinson/5day-weather-forecast
 
 ## Installation
 N/A
