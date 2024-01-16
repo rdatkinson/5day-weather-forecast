@@ -20,4 +20,13 @@ function getCoordinates(city) {
             }
             return response.json();
         })
+        .then(data => {
+            // Once coordinates are received, fetch weather data
+            getWeather(data.coord.lat, data.coord.lon, city);
+        })
+        .catch(error => {
+            // Handle any errors in fetching coordinates
+            console.error('Error:', error);
+            alert(error.message);
+        });
 }
