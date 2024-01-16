@@ -34,5 +34,18 @@ function getCoordinates(city) {
 // Function to get weather data using coordinates
 function getWeather(lat, lon, city) {
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
+    // Fetch request for 5-day weather forecast
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            // Update the UI with fetched weather data
+            updateUI(data, city);
+            // Update the search history
+            updateHistory(city);
+        })
+        .catch(error => {
+            // Handle errors in fetching weather data
+            console.error('Error:', error);
+            alert('Error fetching weather data.');
+        });
 }
