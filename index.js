@@ -11,4 +11,13 @@ document.getElementById('search-button').addEventListener('click', function() {
 // Function to get coordinates of the city
 function getCoordinates(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+    // Fetch request to OpenWeatherMap to get coordinates
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`City not found: ${response.status}`);
+            }
+            return response.json();
+        })
 }
