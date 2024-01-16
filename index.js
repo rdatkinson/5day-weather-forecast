@@ -107,3 +107,12 @@ function updateHistory(city) {
             historyContainer.appendChild(historyDiv);
         });
 }
+
+// Function to load saved history from localStorage on page load
+window.onload = function() {
+    const savedHistory = JSON.parse(localStorage.getItem('weatherSearchHistory')) || [];
+    // Update UI with each city in the saved history
+    savedHistory.forEach(city => {
+        updateHistory(city);
+    });
+}
