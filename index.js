@@ -62,5 +62,13 @@ function updateUI(weatherData, city) {
      // Clear and update forecast weather
      const forecastContainer = document.getElementById('forecast-weather');
      forecastContainer.innerHTML = ''; // Clear previous forecasts
- 
+     
+     // Loop through the forecast data and create elements for each day
+    for (let i = 0; i < weatherData.list.length; i += 8) {
+        const dayData = weatherData.list[i];
+        const date = new Date(dayData.dt_txt).toLocaleDateString();
+        const temp = dayData.main.temp;
+        const humidity = dayData.main.humidity;
+        const wind = dayData.wind.speed;
+        const iconUrl = `http://openweathermap.org/img/w/${dayData.weather[0].icon}.png`;
 }
