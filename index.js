@@ -84,3 +84,8 @@ function updateUI(weatherData, city) {
         forecastContainer.appendChild(forecastDiv);
     }
 }
+
+// Function to update search history
+function updateHistory(city) {
+    
+}
