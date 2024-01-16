@@ -30,3 +30,9 @@ function getCoordinates(city) {
             alert(error.message);
         });
 }
+
+// Function to get weather data using coordinates
+function getWeather(lat, lon, city) {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+}
