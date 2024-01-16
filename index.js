@@ -95,4 +95,7 @@ function updateHistory(city) {
         // Save the updated history back to localStorage
         localStorage.setItem('weatherSearchHistory', JSON.stringify(history));
     }
+    // Update the search history section in the UI
+    const historyContainer = document.getElementById('search-history');
+    historyContainer.innerHTML = ''; // Clear previous history
 }
