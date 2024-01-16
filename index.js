@@ -59,4 +59,8 @@ function updateUI(weatherData, city) {
     document.getElementById('humidity').textContent = `${weatherData.list[0].main.humidity}%`;
     document.getElementById('wind').textContent = `${weatherData.list[0].wind.speed} KPH`;
 
+     // Clear and update forecast weather
+     const forecastContainer = document.getElementById('forecast-weather');
+     forecastContainer.innerHTML = ''; // Clear previous forecasts
+ 
 }
